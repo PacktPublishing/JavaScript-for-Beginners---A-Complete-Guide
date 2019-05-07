@@ -1,0 +1,26 @@
+
+function validateName() {
+    var name = document.forms["testForm"]["name"].value;
+    if ( name == null || name == "" ) {
+    	alert( "Name is mandatory !!!" );
+    	return false;
+    }
+    
+}
+
+function validateEmail()
+{
+   var email = document.forms["testForm"]["email"].value;
+   // test@test.com - Valid
+   // @test.com - Invalid
+   // test@.com - Invalid
+   // test.test@test.com - Valid
+   atLocation = email.indexOf("@");
+   dotLocation = email.lastIndexOf(".");
+
+   if ( atLocation < 1 || (dotLocation - atLocation) < 2 ) {
+   	alert ( "Email format not valid !!!" );
+   	document.testForm.email.focus();
+   	return false;
+   }
+}

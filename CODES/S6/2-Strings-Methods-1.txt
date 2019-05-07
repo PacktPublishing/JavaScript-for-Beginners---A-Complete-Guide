@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">String Methods - Part 1</span>
+</h1>
+
+<p>
+	<span id="content1"></span>
+	<span id="content2"></span>
+	<span id="content3"></span>
+	<span id="content4"></span>
+	<span id="content5"></span>
+	<span id="content6"></span>
+	<span id="content7"></span>
+</p>
+
+<script>
+// All string actions return new string.
+// It does not modify the original string.
+	var string1 = "Let's find the location";
+	var string2 = "Let's find 1st text and 2nd text";
+	var s1 = "Hello";
+	var s2 = "World";
+	var x = string1.charAt(2);
+	var y = string1.charCodeAt(2);
+	var z1 = string2.indexOf("text");
+	var z2 = string2.lastIndexOf("text");
+	var z3 = string2.search("text");
+
+	document.getElementById("content1").
+		innerHTML=x;
+	document.getElementById("content2").
+		innerHTML=y;
+	document.getElementById("content3").
+		innerHTML=z1 + " " + z2 + " " + z3;
+	document.getElementById("content4").
+		innerHTML=string1.toUpperCase();
+	document.getElementById("content5").
+		innerHTML=string1.toLowerCase();
+	document.getElementById("content6").
+		innerHTML=s1.concat(" ", s2);
+</script>
+</body>
+</html>

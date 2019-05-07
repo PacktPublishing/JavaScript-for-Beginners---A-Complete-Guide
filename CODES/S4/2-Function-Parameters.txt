@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Function Parameters</span>
+</h1>
+
+<p>
+	<span id="content1"></span>
+	<span id="content2"></span>
+	<span id="content3"></span>
+	<span id="content4"></span>
+	<span id="content5"></span>
+	<span id="content6"></span>
+</p>
+
+<script>
+	var a = 10;
+	var car = {make: "BMW", model: "335i"};
+
+	function jsFunction(x) {
+		if (x === undefined) {
+			x = 0;
+		}
+		return x;
+	}
+
+	function changeValue(x) {
+		x = x + 10;
+		return x;
+	}
+
+	function changeObject(x) {
+		x.model="550i";
+		return x.model;
+	}
+
+	function argumentsObject(a, b, c) {
+		return arguments[0];
+	}
+
+
+	document.getElementById("content1").
+	innerHTML=jsFunction();
+	document.getElementById("content2").
+	innerHTML=changeValue(a);
+	document.getElementById("content3").
+	innerHTML=a;
+	document.getElementById("content4").
+	innerHTML=changeObject(car);
+	document.getElementById("content5").
+	innerHTML=car.model;
+	document.getElementById("content6").
+	innerHTML=argumentsObject(1, 2, 3);
+</script>
+</body>
+</html>

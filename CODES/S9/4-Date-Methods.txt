@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Date Methods</span>
+</h1>
+<p><span id="content1"></span></p>
+<p><span id="content2"></span></p>
+<p><span id="content3"></span></p>
+<p><span id="content4"></span></p>
+<p><span id="content5"></span></p>
+<p><span id="content6"></span></p>
+
+<script>
+
+// getDate() - get day as a number (1-31)
+var currentDate = new Date();
+document.getElementById("content1").
+	innerHTML=currentDate.getDate();
+
+// getFullYear - get year of a date
+document.getElementById("content2").
+	innerHTML=currentDate.getFullYear();
+
+// setDate() - sets day of the month (1-31)
+var d1 = new Date();
+d1.setDate(20);
+document.getElementById("content3").
+    innerHTML=d1;
+
+// Parsing Dates - Date.parse()
+// Returns milliseconds between date and 01/01/1970
+var milliseconds = Date.parse("July 20, 2015");
+document.getElementById("content4").
+	innerHTML=milliseconds;
+var d2 = new Date(milliseconds);
+document.getElementById("content5").
+	innerHTML=d2;
+
+// Compare Dates
+var compareDate, text;
+compareDate = new Date();
+compareDate.setFullYear(2020, 7, 20);
+if (compareDate > currentDate) {
+	text = compareDate.toString() + " is future";
+} else {
+	text = "Today is future to " + compareDate.toString();
+}
+
+document.getElementById("content6").
+	innerHTML=text;
+
+// Exercise - Try to use them in the code
+// Get Methods
+// getDay() 		  Get weekday (0-6)
+// getHours() 		  Get hour (0-23)
+// getMilliseconds()  Get milliseconds (0-999)
+// getMinutes() 	  Get minutes (0-59)
+// getMonth() 		  Get month (0-11)
+// getSeconds() 	  Get seconds (0-59)
+// getTime() 		  Get time (milliseconds since 01/01/1970)
+
+// Set Methods
+// setHours() 		  Set hour (0-23)
+// setMilliseconds()  Set milliseconds (0-999)
+// setMinutes() 	  Set minutes (0-59)
+// setMonth() 		  Set month (0-11)
+// setSeconds() 	  Set seconds (0-59)
+// setTime() 		  Set time (milliseconds since 01/01/1970)
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">JavaScript Exception Handling</span>
+</h1>
+<p><span>Please enter the age</span></p>
+<p><input id="content1" type="text"></p>
+<p><button type="button"
+	onclick="jsFunction()">Validate</button></p>
+<p><span id="content2"></span></p>
+<p><span id="content3"></span></p>
+
+<script>
+
+// try-catch-finally
+// throw
+
+function jsFunction() { 
+    var x, y;
+    x = document.getElementById("content1").value;
+    try {
+    	// if (x<20 || x>12) {
+	    // 	teenfunction();   	
+    	// }
+    	if (x>200) {
+    		throw "You gotta be kidding !!!";
+    	}
+    } catch (e) {
+    	// document.getElementById("content2").innerHTML=e.stack;
+    		// "name: " + e.name + " message: " + e.message;
+    	document.getElementById("content2").innerHTML=e;
+    }
+    finally {
+    	document.getElementById("content1").value="";
+    }
+}
+
+function teenFunction() {
+}
+
+</script>
+</body>
+</html>

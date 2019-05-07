@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Boolean</span>
+</h1>
+<p><span id="content1"></span></p>
+<p><span id="content2"></span></p>
+<p><span id="content3"></span></p>
+<p><span id="content4"></span></p>
+<p><span id="content5"></span></p>
+<p><span id="content6"></span></p>
+<p><span id="content7"></span></p>
+
+<script>
+
+// Boolean (True or False)
+var bool1 = Boolean(10 == 10);
+var bool2 = (10 == 10);
+var bool3 = 10 == 10;
+document.getElementById("content1").
+	innerHTML=bool1;
+document.getElementById("content2").
+	innerHTML=bool2;
+document.getElementById("content3").
+	innerHTML=bool3;
+
+// Boolean of 0 (zero)
+var boolZero = Boolean(0);
+document.getElementById("content4").
+	innerHTML="Boolean of 0: " + Boolean(boolZero);
+
+// Boolean of Empty String
+var boolEmptyString = "";
+document.getElementById("content5").
+    innerHTML="Boolean of empty string: " + Boolean(boolEmptyString);
+
+// Boolean of Null/Undefined
+var boolNull;
+document.getElementById("content6").
+	innerHTML="Boolean of Null: " + Boolean(boolNull);
+
+// Boolean of NaN
+var boolNaN = 10 / "Google";
+document.getElementById("content7").
+	innerHTML="Boolean of NaN " + Boolean(boolNaN);
+</script>
+</body>
+</html>

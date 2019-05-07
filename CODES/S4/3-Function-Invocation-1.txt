@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Function Invocation - Part 1</span>
+</h1>
+<p>
+	<span id="content1"></span>
+	<span id="content2"></span>
+	<span id="content3"></span>
+</p>
+
+<script>
+	function jsFunction(a, b) { 
+    	return a + b;
+	}
+
+	var car = {
+		make: "BMW",
+		model: "335i",
+		info: function() {
+			return this.make + " " + this.model;
+		}
+	}
+
+	var person = {
+		name: "Mike",
+		info: function() {
+			return this.name;
+		}
+	}
+
+	function jsGlobalObjectFunction() {
+		return this;
+	}
+
+	// Invoking a Function as a Function
+	document.getElementById("content1").
+	innerHTML=window.jsFunction(2, 1);
+
+	// Invoking a Function as a Method
+	document.getElementById("content2").
+	innerHTML=car.info();
+
+	// Global Object
+	document.getElementById("content3").
+	innerHTML=jsGlobalObjectFunction();
+</script>
+</body>
+</html>

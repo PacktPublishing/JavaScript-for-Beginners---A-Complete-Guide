@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">String Methods - Part 2</span>
+</h1>
+
+<p>
+	<span id="content1"></span>
+	<span id="content2"></span>
+	<span id="content3"></span>
+	<span id="content4"></span>
+	<span id="content5"></span>
+	<span id="content6"></span>
+	<span id="content7"></span>
+	<span id="content8"></span>
+</p>
+
+<script>
+// All string actions return new string.
+// It does not modify the original string.
+	var string1 = "Let's slice some text from this string";
+
+	// slice
+	var sub1 = string1.slice(2, 8);
+	var sub2 = string1.slice(-8, -2);
+	var sub3 = string1.slice(30);
+
+	// substring - similar to slice
+	// Cannot accept negative arguments
+	var sub4 = string1.substring(2, 8);
+
+	// substr
+	// second parameter cannot be negative because
+	// it is length
+	var sub5 = string1.substr(2, 8);
+	var sub6 = string1.substr(-8, 3);
+	var sub7 = string1.substr(30);
+
+	// Replace
+	var sub8 = string1.replace("text", "TEXT");
+
+	document.getElementById("content1").
+		innerHTML=sub1;
+	document.getElementById("content2").
+		innerHTML=sub2;
+	document.getElementById("content3").
+		innerHTML=sub3;
+	document.getElementById("content4").
+		innerHTML=sub4;
+	document.getElementById("content5").
+		innerHTML=sub5;
+	document.getElementById("content6").
+		innerHTML=sub6;
+	document.getElementById("content7").
+		innerHTML=sub7;
+	document.getElementById("content8").
+		innerHTML=sub8;
+</script>
+</body>
+</html>

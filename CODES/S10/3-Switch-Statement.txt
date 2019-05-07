@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Switch Statement</span>
+</h1>
+<p><span id="content1"></span></p>
+<p><span id="content2"></span></p>
+
+
+<script>
+var day;
+var currentDay = 6; // 0-6 (Sunday-Saturday)
+
+switch(currentDay) {
+	case 0:
+		day = "Sunday";
+		break;
+	case 1:
+		day = "Monday";
+		break;
+	case 2:
+		day = "Tuesday";
+		break;
+	case 3:
+		day = "Wednesday";
+		break;
+	case 4:
+		day = "Thursday";
+		break;
+	case 5:
+		day = "Friday";
+		break;
+	case 6:
+		day = "Saturday";
+		break;
+	default:
+		day = "Looking forward to weekend !!!";
+}
+document.getElementById("content1").innerHTML = day;
+
+switch(currentDay) {	
+	case 1:
+	case 2:
+	case 3:
+	case 4:
+	case 5:
+		day = "It's a weekday !!!";
+		break;
+	case 6:
+	case 0:
+		day = "It's a weekend !!!";
+		break;
+	default:
+		day = "Looking forward to weekend !!!";
+}
+document.getElementById("content2").innerHTML = day;
+
+</script>
+</body>
+</html>

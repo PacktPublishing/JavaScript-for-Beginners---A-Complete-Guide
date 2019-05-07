@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body onload="checkLanguage()">
+<h1>
+	<span class="animate">Events</span>
+</h1>
+<p>
+	<span id="content"></span>
+</p>
+<!-- onclick -->
+<p>
+	<span onclick="this.innerHTML='Text Change !!!'">Click</span>
+</p>
+<p>
+	<span>Name: <input type="text" id="name" onchange=
+		"changeCapitalization()"></span>
+</p>
+<p>
+	<button onmouseover="mouseOver(this)"
+	 onmouseout="mouseOut(this)">Submit</button>
+</p>
+
+<script>
+// onload
+function checkLanguage() {
+	var text = "Language: " + navigator.language;
+	document.getElementById("content").innerHTML = text;
+}
+
+// onchange
+function changeCapitalization() {
+	var text = document.getElementById("name");
+    text.value = text.value.toUpperCase();
+}
+
+// Mouse Over
+function mouseOver(e) {
+	e.innerHTML = "Click !!!";
+	e.style.fontSize = "30px";
+	e.style.color = "blue";
+}
+
+// Mouse Out
+function mouseOut(e) {
+	e.innerHTML = "Submit";
+	e.style.fontSize = "18px";
+	e.style.color = "navy";
+}
+
+// Exercise
+// onmousedown - When mouse down and don't release
+// onmouseup - Release mouse
+// onfocus - Element gets focus
+	
+</script>
+</body>
+</html>

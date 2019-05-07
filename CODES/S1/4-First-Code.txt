@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+<h1>How do we insert JavaScript in HTML</h1>
+<p id="content">This is the current text</p>
+
+<button type="button" onclick="jsFunction()">Let's change the text!</button>
+<script src="externalScript.js">
+
+</script>
+</body>
+</html>

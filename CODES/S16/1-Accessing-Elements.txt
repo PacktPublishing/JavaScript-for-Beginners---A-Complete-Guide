@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 id="header1">
+    <span class="animate">This is the header of the page</span>
+</h1>
+<p>
+<input id="input1" type="text"></input>
+<p><button onclick="jsFunction()">Submit</button></p>
+<p><span id="p1">Hide/Show</span></p>
+<p><button onclick="jsHide()">Hide</button>
+<button onclick="jsShow()">Show</button></p>
+
+<script>
+function jsFunction() {
+    var element1 = document.getElementById("header1");
+    element1.style.color = "Red";
+    element1.style.fontSize = "18px";
+    element1.style.fontFamily = "Calibri";
+    
+    var element2 = document.getElementById("input1");
+    element2.type = "number";
+    
+}
+function jsHide() {
+    var element3 = document.getElementById("p1");
+    element3.style.visibility = "hidden";
+
+}
+function jsShow() {
+    var element3 = document.getElementById("p1");
+    element3.style.visibility = "visible";
+
+}
+</script>
+</body></html>

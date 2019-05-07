@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+
+<body>
+
+<h1>
+	<span class="animate">Cookies</span>
+</h1>
+
+<p>
+<span id="content1">
+Cookies are used to store data
+Data is stored in small text file on computer
+
+Stored as name value pair
+Example: username=Sam; phone=000-000-0000
+</span>
+</p>
+<p>
+<span id="content2">
+Create Cookie:
+document.cookie="username=Sam; expires=Fri, 10 July 2015 12:00:00 UTC";
+</span>
+</p>
+<p>
+<span id="content3">
+Read Cookie:
+document.cookie returns all stored cookies in one string
+cookieName1=cookieValue1; cookieName2=cookieValue2
+</span>
+</p>
+<p>
+<span id="content1">
+Change Cookie:
+document.cookie="username=Tim";
+</span>
+</p>
+<p>
+<span id="content1">
+Delete Cookie:
+Set a date which is in the past
+document.cookie="username=; expires=currentDate -1"
+</span>
+</p>
+
+<script>
+</script>
+</body>
+</html>

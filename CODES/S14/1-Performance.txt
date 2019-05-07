@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Performance Improvements</span>
+</h1>
+<p><span id="content1"></span></p>
+<p><span id="content2"></span></p>
+<p><span id="content3"></span></p>
+
+<script>
+
+// Reduce loop activites
+var names = ["John", "Sam"];
+// var i;
+// var len = names.length;
+// for (i=0; i<len; i++) {
+
+// }
+
+// Reduce DOM Access
+var domObject = document.getElementById("content1");
+domObject.innerHTML = "names";
+domObject.innerHTML = "something else";
+
+// document.getElementById("content2").innerHTML=;
+
+// Avoid Unnecessary Variables
+var make="BMW";
+var model="335i";
+// var car = make + " " + model;
+
+document.getElementById("content3").innerHTML=
+	make + " " + model;
+
+</script>
+</body>
+</html>

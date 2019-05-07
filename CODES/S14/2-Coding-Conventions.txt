@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Coding Conventions</span>
+</h1>
+<p><span id="content1"></span></p>
+<p><span id="content2"></span></p>
+<p><span id="content3"></span></p>
+
+<script>
+
+// Improves readability and maintainance
+// Variable/Function names - lower camel case
+var stringNameWithNumerics = "Value10";
+var string_name_with_numerics = "Value10";
+
+// Operators
+// Put spaces around operators
+var a = b + c;
+
+// Indentation - tab or 4 spaces
+function jsFunction() {
+	var x;
+    var y;
+	var z;
+}
+
+// Objects
+var car = { make: "BMW",
+	model: "335i",
+	year: 2015,
+	color: "Red"
+};
+
+// Line Length < 80
+document.getElemetById("content").innerHTML=
+	car.make;
+
+// File Names - lower cases names
+// Do not mix lower and upper case
+
+
+</script>
+</body>
+</html>

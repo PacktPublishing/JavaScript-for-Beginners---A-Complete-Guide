@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Object Properties</span>
+</h1>
+
+<p>
+	<span id="content1"></span>
+	<span id="content2"></span>
+	<span id="content3"></span>
+</p>
+
+<script>
+	var personName = new String("Mike");
+	var numbers = new Number(10);
+	var boolValue = new Boolean(true);
+
+	var car = {
+		make: "BMW",
+		model: "335i",
+		color: "Red"
+	};
+	car.year=2015;
+
+	// Never use for the built-in JavaScript properties
+	delete car.year;
+	
+	var x, temp="";
+	for (x in car) {
+		temp +=car[x] + " ";
+	}
+	
+	document.getElementById("content1").
+	innerHTML=typeof personName;
+	document.getElementById("content2").
+	innerHTML=car.make + " " + car["model"] + " This car's year is: " + car.year;
+	document.getElementById("content3").
+	innerHTML= temp;
+</script>
+</body>
+</html>

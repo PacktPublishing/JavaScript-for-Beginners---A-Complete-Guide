@@ -1,0 +1,84 @@
+body {
+    background-color: #FFDE59;
+}
+
+h1 {
+	color: #FFF;
+	font-weight: bold;
+    margin-left: 0px;
+	
+	text-align: left;
+	width: auto;
+	padding: 4px;
+}
+
+h1 span {
+	background-color: #98BF21;
+	padding: 10px 20px;
+	border-radius: 25px;
+}
+
+p {
+	color: #FFF;
+	font-weight: bold;
+	font-size: 30px;
+	margin-left: 60px;	
+	text-align: left;
+	padding: 4px;
+	position: relative;
+	top: 60px;
+}
+
+p span {
+	background-color: #98BF21;
+	padding: 10px 20px;
+	border-radius: 2px;
+}
+
+p button {
+	background-color: #98BF21;
+	padding: 10px 20px;
+	border-radius: 2px;
+}
+
+.submit-button {
+	background-color:#98BF21;
+	color:#fff;
+	font-weight: bold;
+	font-size: 18px;
+	padding: 10px 20px;
+	border-radius: 10px;
+	border:0;
+}                
+
+/*Standard*/
+.animate {
+	position: absolute;
+	/*animation-timing-function: ease;	*/
+	animation: mymove 2s 1 ease forwards;
+	/*animation: mymove 2s 1 ease-in-out;*/
+}
+/*Chrome, Safari*/
+.animate {
+	position: absolute;
+	/*-webkit-animation-timing-function: ease;	*/
+	-webkit-animation: mymove 2s 1 ease forwards;
+	/*-webkit-animation: mymove 2s 1 ease-in-out;*/
+}
+
+/*Standard*/
+@keyframes mymove {
+    from {
+    	 transform: translateX(0px);
+    }
+    to {
+         transform: translateX(100px);
+    }
+}
+
+/*Chrome, Safari*/
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 100px;}
+}
+

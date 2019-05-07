@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Number Methods - Part 1</span>
+</h1>
+<p><span id="content1"></span></p>
+<p><span id="content2"></span></p>
+<p><span id="content3"></span></p>
+<p><span id="content4"></span></p>
+
+<script>
+// toString()
+// Returns a number as a string
+var a = 10;
+
+// toExponential()
+// Returns string with number rounded and
+// in exponential form
+var b = 10.956; // 1.10 * 10 = 11
+
+// toFixed()
+// Returns a string with specified
+// number of decimals
+var c = 10.956;
+
+// toPrecision()
+// Returns a string with specified length
+var d = 10.956;
+
+	document.getElementById("content1").
+		innerHTML=a.toString() + " " + (10).toString() +
+		" " + (2*10).toString();
+	document.getElementById("content2").
+		innerHTML=b.toExponential(2) + " "
+		 + b.toExponential(6);
+	document.getElementById("content3").
+		innerHTML=c.toFixed(6);
+	document.getElementById("content4").
+		innerHTML=d.toPrecision(6);
+</script>
+</body>
+</html>

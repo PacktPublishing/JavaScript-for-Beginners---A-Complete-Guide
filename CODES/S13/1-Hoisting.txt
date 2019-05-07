@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">JavaScript Hoisting</span>
+</h1>
+<p><span id="content1"></span></p>
+<p><span id="content2"></span></p>
+<p><span id="content3"></span></p>
+
+<script>
+
+// Hoisting - Moving declarations on the top
+
+num=10;
+
+document.getElementById("content1").innerHTML=num;
+var num; // Declaration - moved to top
+
+// Initializations not hoisted
+var a = 10;
+var b;
+document.getElementById("content2").innerHTML= a + b;
+b=9;
+
+// Function Hoisting
+
+document.getElementById("content3").innerHTML=
+	jsFunction(2, 8);
+
+function jsFunction(x, y) {
+	return x + y;
+}
+
+</script>
+</body>
+</html>

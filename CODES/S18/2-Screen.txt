@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1>
+	<span class="animate">Window Screen</span>
+</h1>
+<p><span id="content1"></span></p>
+<p><span id="content2"></span></p>
+<p><span id="content3"></span></p>
+<p><span id="content4"></span></p>
+<p><span id="content5"></span></p>
+<p><span id="content6"></span></p>
+
+<script>
+document.getElementById("content1").innerHTML = 
+"Width: " + window.screen.width + " px";
+
+document.getElementById("content2").innerHTML = 
+"Available width: " + screen.availWidth + " px";
+
+document.getElementById("content3").innerHTML = 
+"Height: " + screen.height + " px";
+
+document.getElementById("content4").innerHTML = 
+"Available height: " + screen.availHeight + " px";
+
+document.getElementById("content5").innerHTML = 
+"Color depth: " + screen.colorDepth + " bits";
+
+document.getElementById("content6").innerHTML = 
+"Pixel depth: " + screen.pixelDepth + " bits";
+
+</script>
+
+
+</body>
+</html>

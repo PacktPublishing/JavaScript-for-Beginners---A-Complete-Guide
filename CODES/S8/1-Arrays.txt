@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Arrays</span>
+</h1>
+<p><span id="content1a"></span>
+<span id="content1b"></span>
+<span id="content1c"></span></p>
+<p><span id="content2a"></span>
+<span id="content2b"></span>
+<span id="content2c"></span></p>
+<p><span id="content3a"></span>
+<span id="content3b"></span>
+<span id="content3c"></span></p>
+
+<script>
+var name1 = "John";
+var name2 = "Sam";
+
+var names = ["John", "Sam", "Tim"];
+
+// Properties and Methods
+var x = names.length;
+var y = names.sort();
+
+// Adding elements
+names[names.length] = "Mike";
+names[4] = "Anne";
+
+// Arrays as Objects
+var names1 = new Array("BMW", "Audi");
+var names2 = new Array(100);
+
+var names3 = ["John", 10];
+
+var cars = {make: "BMW", model: "335i"};
+
+// Associative Arrays
+// Arrays with named indexes(indices)
+// JavaScript does not support it
+// In JavaScript - use objects for named indexes
+
+	document.getElementById("content1a").
+		innerHTML=names[2];
+	document.getElementById("content1b").
+		innerHTML=x;
+	document.getElementById("content1c").
+		innerHTML=y;
+	document.getElementById("content2a").
+		innerHTML=names;
+	document.getElementById("content2b").
+		innerHTML=names1[0];
+	document.getElementById("content2c").
+		innerHTML=names2[90];
+	document.getElementById("content3a").
+		innerHTML=names3[1];
+	document.getElementById("content3b").
+		innerHTML=typeof names;
+	document.getElementById("content3c").
+		innerHTML=cars.make;
+</script>
+</body>
+</html>

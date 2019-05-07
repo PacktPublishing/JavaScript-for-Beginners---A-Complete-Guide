@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1>
+	<span class="animate">This is the Hello page</span>
+</h1>
+<p>
+<button id="btn1" onclick="backFunction()" >Back</button>
+</p>
+
+<script>
+
+function backFunction() {
+    window.history.back();
+}
+
+</script>
+
+
+</body>
+</html>

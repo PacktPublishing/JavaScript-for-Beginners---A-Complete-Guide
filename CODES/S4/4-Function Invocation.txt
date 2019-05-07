@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Function Invocation - Part 2</span>
+</h1>
+
+<p>
+	<span id="content1"></span>
+	<span id="content2"></span>
+</p>
+
+<script>
+	function jsFunction(a, b) {
+		this.make=a;
+		this.model=b;
+	}
+
+	var x = new jsFunction("BMW", "335i");
+
+	// Invoking a Function with a Function Constructor
+	document.getElementById("content1").
+	innerHTML=x.make;
+
+	// Self-Invoking Functions
+	(function () {
+		document.getElementById("content2").innerHTML=
+		"Hey, let me call myself";
+	})();
+</script>
+</body>
+</html>

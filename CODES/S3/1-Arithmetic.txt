@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Arithmetic and Assignment Operators</span>
+</h1>
+
+<p>
+	<span id="content"></span>
+</p>
+
+<script>
+	var x = 20, y = 10;
+	// post-increment - first assign the value and then increment
+	// pre-increment - first increment and then assign the value
+	//var z = x++;
+	
+	// x+=y; // x = x + y;
+	// x-=y; // x = x - y;
+	// x*=y; // x = x * y;
+	// x/=y; // x = x / y;
+	// x%=y; // x = x % y;
+	document.getElementById("content").innerHTML=x;
+</script>
+</body>
+</html>

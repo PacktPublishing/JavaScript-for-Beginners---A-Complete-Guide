@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">For Loop</span>
+</h1>
+<p><span id="content1"></span></p>
+<p><span id="content2"></span></p>
+<p><span id="content3"></span></p>
+
+<script>
+
+// For Loop - Iterates over code a number of times
+// for (stat1; stat2; stat3) {	
+// }
+var i;
+var text="";
+
+for (i=0; i<10; i++) { // i++ -> i = i + 1
+	text += " " + i;
+}
+
+var length1;
+
+var names=["John", "Sam", "Tim"];
+var textNames="";
+for (i=0, length1=names.length; i<length1; i++) {
+	textNames += names[i] + " ";
+}
+
+
+// For in Loop - Iterates over the properties of an object
+var car = {make:"BMW", model:"335i", color:"Red"};
+var x;
+var carsText="";
+for (x in car) {
+	carsText += car[x] + " ";
+}
+
+document.getElementById("content1").innerHTML=text;
+document.getElementById("content2").innerHTML=textNames;
+document.getElementById("content3").innerHTML=carsText;
+
+</script>
+</body>
+</html>

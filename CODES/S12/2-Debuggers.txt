@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">JavaScript Debugging</span>
+</h1>
+<p><span id="content1"></span></p>
+
+<script>
+
+ // Firefox
+ // Tools -> Web Developer -> Web Console / Debugger
+ // Mac: option + command + I
+ // Windows: F12, ctrl + shift + I
+
+ // Chrome:
+ // View -> Developer -> Developer Tools
+ // Mac: option + command + I
+ // Windows: F12, ctrl + shift + I
+
+var a = 10;
+var b = 20;
+var c = a + b;
+console.log(a);
+console.log(b);
+console.log(c);
+
+document.getElementById("content1").innerHTML=c;
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1>
+	<span class="animate">
+		document.body and document.element</span>
+</h1>
+<p><span>Line 1</span></p>
+<p><span>Line 2</span></p>
+<p><span>Line 3</span></p>
+<p>
+	<button onclick="jsBody()">JS Body</button>
+    <button onclick="jsElement()">JS Element</button>
+</p>
+
+ <!-- Node Value - Same as innerHTML -->
+
+<script>
+function jsBody() {
+	alert(document.body.innerHTML);
+}
+
+function jsElement() {
+	alert(document.documentElement.innerHTML);
+}
+</script>
+</body>
+</html>

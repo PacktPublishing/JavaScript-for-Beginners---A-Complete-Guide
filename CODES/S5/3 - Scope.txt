@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">JavaScript Scope</span>
+</h1>
+
+<p>
+	<span id="content1"></span>
+	<span id="content2"></span>
+	<span id="content3"></span>
+</p>
+
+<script>
+	// Global Scope
+	var y = 20;
+
+	(function jsFunction() {
+		// Local Scope to the function
+		var x = 10;
+		z = 30;
+		document.getElementById("content2").
+		innerHTML="The value of y is: " + y;
+	})();
+
+	// Arguments have local scope to the function
+	function jsFunction1(a, b) {
+		return a + b;
+	}
+
+	document.getElementById("content1").
+		innerHTML="Local variables to function --> "
+		 + typeof x;
+	document.getElementById("content3").
+		innerHTML="The value of z is: " + z;
+</script>
+</body>
+</html>

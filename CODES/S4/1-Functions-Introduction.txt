@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Functions Introduction</span>
+</h1>
+
+<p>
+	<span id="content1"></span>
+	<span id="content2"></span>
+	<span id="content3"></span>
+</p>
+
+<script>
+	// Same as Variables
+	function jsFunction1(a, b) {
+		return a + b;
+	}
+
+	var multiply=function(x, y) {return x*y};
+
+	function jsFunction2(a, b) {
+		return arguments.length;
+	}
+
+	document.getElementById("content1").
+	innerHTML=jsFunction1(10, 90);
+	document.getElementById("content2").
+	innerHTML=multiply(10, 10);
+	document.getElementById("content3").
+	innerHTML=jsFunction2(10, 20);
+
+</script>
+</body>
+</html>

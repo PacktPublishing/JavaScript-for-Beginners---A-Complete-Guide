@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">While Loop</span>
+</h1>
+<p><span id="content1"></span></p>
+<p><span id="content2"></span></p>
+
+<script>
+
+// Infinite loops should be avoided
+var x = 0;
+var y = 0;
+while (x<0) {
+	x = x + 1;
+}
+
+// At least executes once before checking the condition
+do {
+	y = y + 1;
+} while (y < 0);
+
+document.getElementById("content1").innerHTML="x is: " + x;
+document.getElementById("content2").innerHTML="y is: " + y;
+
+</script>
+</body>
+</html>

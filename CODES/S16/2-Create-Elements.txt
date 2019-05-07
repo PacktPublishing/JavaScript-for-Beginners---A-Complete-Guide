@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 id="header1">
+    <span class="animate">Creating and Deleting Elements</span>
+</h1>
+<div id="div1">
+    <p><button onclick="jsCreate()">Create</button>
+    <button onclick="jsDelete()">Delete</button></p>
+    <p id="p1"><span id="s1">Line 1</p>
+    <p id="p2"><span id="s2">Line 2</p>
+</div>
+
+<script>
+function jsCreate() {
+    var p = document.createElement("p");
+    var span = document.createElement("span");
+    p.appendChild(span);
+
+    var textNode = document.createTextNode("Line 3");
+    span.appendChild(textNode);
+
+    var element = document.getElementById("div1");
+    var p1 = document.getElementById("p1");
+    element.appendChild(p);
+    //element.insertBefore(p, p1);
+}
+
+function jsDelete() {
+    var parent = document.getElementById("div1");
+    var child = document.getElementsByTagName("p")[3];
+    parent.removeChild(child);
+}
+</script>
+</body>
+</html>

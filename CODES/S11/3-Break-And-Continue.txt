@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Break and Continue Statements</span>
+</h1>
+<p><span id="content1"></span></p>
+<p><span id="content2"></span></p>
+
+<script>
+
+// Break - Break the loop and execute
+//         the code after the loop
+var i;
+var names=["John", "Sam", "Tim"];
+var length=names.length;
+var textNames1="";
+var textNames2="";
+
+for (i=0; i<length; i++) {
+	if (names[i] == "Sam") {
+		break;
+	}
+	textNames1 += names[i] + " ";
+}
+
+// Continue - Skip one iteration and continue
+//            with the next iteration
+for (i=0; i<length; i++) {
+	if (names[i] == "Sam") {
+		continue;
+	}
+	textNames2 += names[i] + " ";
+}
+
+document.getElementById("content1").
+	innerHTML="Break Statement: " + textNames1;
+document.getElementById("content2").
+	innerHTML="Continue Statement: " + textNames2;
+
+</script>
+</body>
+</html>

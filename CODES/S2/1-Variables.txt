@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">JavaScript Variables</span>
+</h1>
+
+<p>
+	<span id="content"></span>
+</p>
+
+<script>
+/* Can contain letters, digits, underscores, dollar sign
+Name of the variable cannot start with digit
+Can start with letters, underscores, dollar sign
+Cannot use Reserved keywords */
+	var x = 10, y=10;
+	var car="BMW";
+	var Car="Audi";
+	// var y = 20;
+	document.getElementById("content").innerHTML=car;
+</script>
+</body>
+</html>

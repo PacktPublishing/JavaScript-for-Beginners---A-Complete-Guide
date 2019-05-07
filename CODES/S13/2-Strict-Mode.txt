@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">JavaScript Strict Mode</span>
+</h1>
+<p><span id="content1"></span></p>
+<p><span id="content2"></span></p>
+<p><span id="content3"></span></p>
+
+<script>
+
+// use strict - Strict Mode
+// Should be added at the top of the scope
+// New in version 1.8.5 (ECMAScript version 5)
+// Firebug plugin - addon
+
+// Cannot use undeclared variables
+// "use strict"
+// a=10;
+// document.getElementById("content1").innerHTML=a;
+
+// // Local Declaration
+// (function jsFunction() {
+// 	"use strict"
+// 	b = 10;
+// 	document.getElementById("content2").innerHTML=b;
+// })();
+
+// Duplicating parameters is not allowed
+// "use strict"
+// function jsFunction(x, x) {};
+
+// arguments and eval cannot be used as variables
+// "use strict"
+// var arguments = "Some";
+
+// document.getElementById("content3").innerHTML=arguments;
+
+// Deleting a variable, function is not allowed
+// "use strict"
+// x = "value";
+// delete x;
+
+
+</script>
+</body>
+</html>

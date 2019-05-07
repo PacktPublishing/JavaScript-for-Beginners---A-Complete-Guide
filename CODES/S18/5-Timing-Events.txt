@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1>
+	<span class="animate">JavaScript Timing Events</span>
+</h1>
+<p><span id="content1"></span></p>
+<p><button id="btn1"
+	 onclick="clearInterval(timeDisplay)">Stop Watch</button>
+</p>
+<p><span id="content2"></span></p>
+<p>
+	<button id="btn2" 
+	onclick="clearTimeout(handleTime)">Stop Execution</button>
+</p>
+
+<script>
+// setInterval - executes a function repeatedly
+//				 at specified time intervals
+var timeDisplay=setInterval(function() {
+	setIntervalFunction()
+}, 1000);
+function setIntervalFunction() {
+    var watch = new Date();
+    document.getElementById("content1").innerHTML=
+    	watch.toTimeString();
+}
+
+// setTimeout - After waiting for specified milliseconds,
+// 				executes a function only once
+
+handleTime=setTimeout(function() {
+	setTimeoutFunction()
+}, 3000);
+function setTimeoutFunction() {
+	document.getElementById("content2").innerHTML=
+	"Text will show up after 3 seconds";
+}
+
+</script>
+
+
+</body>
+</html>

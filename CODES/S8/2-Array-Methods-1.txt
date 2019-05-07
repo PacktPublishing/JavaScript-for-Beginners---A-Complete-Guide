@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Array Methods - Part 1</span>
+</h1>
+<p><button onclick="deleteFunction()">Delete</button>
+<button onclick="popFunction()">Pop</button>
+<button onclick="pushFunction()">Push</button>
+<button onclick="shiftFunction()">Shift</button>
+<button onclick="unshiftFunction()">Unshift</button></p>
+<p><button onclick="changeFunction()">Change</button>
+<button onclick="spliceFunction()">Splice</button>
+<button onclick="unspliceFunction()">Unsplice</button></p>
+
+<p><span id="content1"></span>
+<span id="content2"></span></p>
+<p><span id="content3"></span></p>
+<p><span id="content4"></span></p>
+<p><span id="content5"></span></p>
+<p><span id="content6"></span></p>
+<p><span id="content7"></span></p>
+<p><span id="content8"></span></p>
+<p><span id="content9"></span></p>
+<p><span id="content10"></span></p>
+
+<script>
+var names = ["John", "Sam", "Tim"];
+// Converting Arrays into Strings
+// valueOf, toString()
+document.getElementById("content1").
+	innerHTML=names.toString();
+
+// join()
+document.getElementById("content2").
+	innerHTML=names.join(" and ");
+
+// Deleting Items
+function deleteFunction() {
+	delete names[0];
+	document.getElementById("content3").
+		innerHTML=names;
+	names[0]="John";
+}
+
+// Popping - Remove last item
+function popFunction() {
+    names.pop();
+    document.getElementById("content4").
+		innerHTML=names;
+}
+
+// Pushing - Add new item to the end
+function pushFunction() {
+    names.push("Tim");
+    document.getElementById("content5").
+		innerHTML=names;
+}
+
+// Shift - Remove first item
+function shiftFunction() {
+    names.shift();
+    document.getElementById("content6").
+		innerHTML=names;
+}
+
+// Unshift - Add new item to the starting
+function unshiftFunction() {
+    names.unshift("John");
+    document.getElementById("content7").
+		innerHTML=names;
+}
+
+// Changing / Modifying Items
+function changeFunction() {
+    names[0] = "Mike";
+    document.getElementById("content8").
+		innerHTML=names;
+}
+
+// Splice - Accepts 3 parameters
+// 1st parameter - Position where new items should be added
+// 2nd parameter - How many items should be removed
+// 3rd paramter - New items to be added
+function spliceFunction() {
+    names.splice(1, 0, "Mike");
+    document.getElementById("content9")
+    	.innerHTML=names;
+}
+
+// Unsplice
+function unspliceFunction() {
+    names.splice(0, 1);
+    document.getElementById("content10")
+    	.innerHTML=names;
+}
+</script>
+</body>
+</html>

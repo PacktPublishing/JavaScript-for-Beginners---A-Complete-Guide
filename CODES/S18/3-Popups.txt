@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1>
+	<span class="animate">JavaScript Popups</span>
+</h1>
+<p>
+<button id="btn1" onclick="alertFunction()" >Alert</button>
+<button id="btn2" onclick="confirmFunction()" >Confirm</button>
+<button id="btn3" onclick="promptFunction()" >Prompt</button>
+</p>
+
+<p>
+	<span id="content1"></span>
+</p>
+<p>
+    <span id="content2"></span>
+</p>
+
+<script>
+
+function alertFunction() {
+    window.alert("This is a test alert !!!");
+}
+
+function confirmFunction() {
+    var x = confirm("Do you accept these terms?");
+    if (x == true) {
+        document.getElementById("content1").innerHTML=
+            "The user accepted the terms";
+    } else {
+        document.getElementById("content1").innerHTML=
+            "The user did not accept the terms";
+    }
+}
+
+function promptFunction() {
+    var carName = prompt("Please enter the car name", "Your choice of Car Name");
+    if (carName != null) {
+        document.getElementById("content2").innerHTML=
+        "Hey, " + carName + " is a great car and looks stunning";
+    } else {
+        document.getElementById("content2").innerHTML=
+            "You did not enter the car name";
+    }
+}
+
+</script>
+
+
+</body>
+</html>

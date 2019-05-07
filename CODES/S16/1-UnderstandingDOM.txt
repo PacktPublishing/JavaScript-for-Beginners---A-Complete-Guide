@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1>
+	<span class="animate">Understanding DOM</span>
+</h1>
+<p><span>Line 1</span></p>
+<p><span>Line 2</span></p>
+<p><span>Line 3</span></p>
+
+<p><span id="content"></span></p>
+
+<script>
+var x = document.getElementsByTagName("p");
+document.getElementById("content").innerHTML = 
+"The 1st paragraph is: " + x[2].innerHTML;
+
+// getElementsByClassName
+
+</script>
+
+</form>
+</body>
+</html>

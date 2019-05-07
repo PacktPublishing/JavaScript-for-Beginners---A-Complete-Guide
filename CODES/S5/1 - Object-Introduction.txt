@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Object Introduction</span>
+</h1>
+
+<p>
+	<span id="content1"></span>
+	<span id="content2"></span>
+	<span id="content3"></span>
+</p>
+
+<script>
+	var x = "Mike";
+	// var car = {
+	// 	make: "Honda",
+	// 	model: "Accord",
+	// 	info: function() { return car.make + " " + car.model }
+	// };
+
+	// Object Properties
+	// key -> value pairs
+	// values can hold primitive and non-primitive type
+	// non-primitive type: objects, functions
+
+	// Object Methods
+	// Used to perform actions on the objects
+	// They belong to the object
+
+	// Primitive types declared as object, but do not use them frequently
+	var personName = new String("John"); 
+	var num = new Number(10);
+	var bool = new Boolean(true);
+
+	// Object Literal
+	var car = {
+		make: "Honda",
+		model: "Accord"
+	};
+
+	var y = car;
+	y.make="Changed Make";
+
+	// Keyword new
+	var carNewKeyword = new Object();
+	carNewKeyword.make="Audi";
+	carNewKeyword.model="A6";
+
+	// Object Constructor
+	function carFunction(make, model) {
+		this.makeName=make;
+		this.modelName=model;
+	}
+
+	var car1 = new carFunction("BMW", "335i");
+	var car2 = new carFunction("BMW", "550i");
+	
+	document.getElementById("content1").
+	innerHTML=car1.makeName;
+	document.getElementById("content2").
+	innerHTML=car2.modelName;
+	document.getElementById("content3").
+	innerHTML=typeof personName;
+
+</script>
+</body>
+</html>

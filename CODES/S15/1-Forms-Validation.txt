@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1>
+	<span class="animate">Forms Validation</span>
+</h1>
+<form name="testForm" action="hello.htm"
+	onsubmit="return validateEmail()" method="post">
+
+<p><span>Email: <input type="text" name="email"/></span></p>
+<p><input type="submit" class="submit-button" value="Submit"></p>
+
+<script src="formValidation.js"></script>
+</form>
+</body>
+</html>

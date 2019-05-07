@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Number Methods - Part 2</span>
+</h1>
+<p><span id="content1a"></span>
+<span id="content1b"></span>
+<span id="content1c"></span></p>
+<p><span id="content2a"></span>
+<span id="content2b"></span>
+<span id="content2c"></span></p>
+<p><span id="content3a"></span>
+<span id="content3b"></span>
+<span id="content3c"></span></p>
+<p><span id="content4a"></span>
+<span id="content4b"></span>
+<span id="content4c"></span></p>
+
+<script>
+// Converting variables to numbers
+
+// Number()
+var a = " 10 10 ";
+var boolTrue = true;
+var boolFalse = false;
+
+// parseInt() - Returns whole
+var b = " 20 10 ";
+var c = "10.2";
+var d = "num 10";
+
+// parseFloat()
+var e = " 10 ";
+var f = "10.2";
+var g = "num 10";
+
+// valueOf()
+var h = 10*2*100;
+
+	document.getElementById("content1a").
+		innerHTML=Number(a) + 10;
+	document.getElementById("content1b").
+		innerHTML=Number(boolTrue);
+	document.getElementById("content1c").
+		innerHTML=Number(boolFalse);
+	document.getElementById("content2a").
+		innerHTML=parseInt(b);
+	document.getElementById("content2b").
+		innerHTML=parseInt(c);
+	document.getElementById("content2c").
+		innerHTML=parseInt(d);
+	document.getElementById("content3a").
+		innerHTML=parseFloat(e);
+	document.getElementById("content3b").
+		innerHTML=parseFloat(f);
+	document.getElementById("content3c").
+		innerHTML=parseFloat(g);
+	document.getElementById("content4a").
+		innerHTML=h.valueOf();
+	// document.getElementById("content4b").
+	// 	innerHTML=;
+	// document.getElementById("content4c").
+	// 	innerHTML=;
+</script>
+</body>
+</html>

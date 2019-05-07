@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Conditional Statements</span>
+</h1>
+<p><span id="content1"></span></p>
+
+<script>
+
+var score = 91;
+var name="John";
+var grade;
+
+if (score > 90 && name == "John") {
+	grade = "Grade A";
+} else if (score > 80) {
+	grade = "Grade B";
+} else {
+	grade = "Grade C";
+}
+
+document.getElementById("content1").
+	innerHTML=grade;
+</script>
+</body>
+</html>

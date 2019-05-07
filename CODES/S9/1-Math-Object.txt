@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Math Object</span>
+</h1>
+<p><span id="content1"></span></p>
+<p><span id="content2"></span></p>
+<p><span id="content3"></span></p>
+<p><span id="content4"></span></p>
+<p><span id="content5"></span></p>
+<p><span id="content6"></span></p>
+
+<script>
+
+
+// Math.random() - Returns a random number between 0 and 1
+document.getElementById("content1").
+	innerHTML=Math.random()*10;
+
+// Math.min() and Math.max()
+document.getElementById("content2").
+	innerHTML="Min: " + Math.min(0, -1, 100, 90) + ", " +
+	"Max: " + Math.max(0, -1, 100, 90);
+
+// Math.round() - Used to round a number to its
+// nearest integer
+document.getElementById("content3").
+    innerHTML=Math.round(1.2);
+document.getElementById("content4").
+	innerHTML=Math.round(1.8);
+
+// Math.ceil() and Math.floor()
+// Math.ceil() - Used to round a number to its
+// nearest integer higher than it
+// Math.floor() - Used to round a number to its
+// nearest integer lower than it
+document.getElementById("content5").
+	innerHTML="Ceil: " + Math.ceil(1.2) + ", Floor: " +
+	Math.floor(1.8);
+
+// Math Constants - 8 constants
+// Math.PI       -> PI
+// Math.E        -> Euler's number
+// Math.SQRT2    -> square root of 2
+// Math.SQRT1_2  -> square root of 1/2
+// Math.LN2      -> natural log of 2
+// Math.LN10     -> natural log of 10
+// Math.LOG2E    -> base 2 log of E
+// Math.LOG10E   -> base 10 log of E 
+document.getElementById("content6").
+    innerHTML="PI: " + Math.PI + ", SQ Root of 2: " +
+    Math.SQRT2;
+</script>
+</body>
+</html>

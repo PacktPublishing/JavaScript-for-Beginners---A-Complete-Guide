@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Date Formats</span>
+</h1>
+<p><span id="content1"></span></p>
+<p><span id="content2"></span></p>
+<p><span id="content3"></span></p>
+<p><span id="content4"></span></p>
+
+<script>
+
+// ISO Dates (YYYY-MM-DD) - Preferred
+var isoFormat1 = new Date("2015-07-21");
+var isoFormat2 = new Date("2015-07-21T00:00:00");
+document.getElementById("content1").
+	innerHTML=isoFormat1;
+document.getElementById("content2").
+	innerHTML=isoFormat2;
+
+// Long Dates (MMM DD YYYY)
+var longFormat = new Date("July 21 2015");
+document.getElementById("content3").
+    innerHTML=longFormat;
+
+// Short Dates (MM/DD/YYYY) "-" can also be used
+var shortFormat = new Date("07/21/2015");
+document.getElementById("content4").
+	innerHTML=shortFormat;
+</script>
+</body>
+</html>

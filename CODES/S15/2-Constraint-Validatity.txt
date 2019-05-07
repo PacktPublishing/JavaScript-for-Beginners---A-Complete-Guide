@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1>
+	<span class="animate">Constraint Validity</span>
+</h1>
+<form action="hello.htm" method="post">
+<p><span>1. Enter Name: <input type="text"
+	name="name" required></span></p>
+<p><input type="submit" class="submit-button"
+	value="Submit"></p>
+</form>
+<p></p>
+
+<p><span>2. Please enter a number between 1 to 10</span></p>
+<p><input id="num" type="number" min="1" max="10"></p>
+<p><button onclick="validateField()">Submit</button></p>
+<p><span id="content1"></span></p>
+
+<p><span>3. Name: <input id="nameId"
+	pattern="[a-zA-Z]{4}" ></span></p>
+<p><button onclick="validatePattern()">Submit</button></p>
+<p><span id="content2"></span></p>
+
+<script src="constraintValidity.js"></script>
+</form>
+</body>
+</html>

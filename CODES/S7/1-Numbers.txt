@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">JavaScript Numbers</span>
+</h1>
+<p><span id="content1"></span>
+<span id="content1a"></p>
+<p><span id="content2"></span>
+<span id="content2a"></span></p>
+<p><span id="content3"></span></p>
+<p><span id="content4"></span></p>
+<p><span id="content5"></span></p>
+<p><span id="content6"></span></p>
+<p><span id="content7"></span></p>
+<p><span id="content8"></span></p>
+<p><span id="content9"></span></p>
+
+<script>
+// Numbers
+// Only one number type
+var a = 10;
+var largeNumber = 123e5;  // 12300000
+
+// Floating-Point -> 17 digits allowed after decimal
+// Not always 100% accurate
+var b = 10.2;
+var c = (.1*10 + .2*10)/10;
+
+// Precision -> 15 digits
+var d = 999999999999999;
+var e = 9999999999999999;
+
+// Hexadecimal -> Starting from 0x
+var myNum = 30;
+
+// Infinity - type is number
+var myInfinity = 100;
+
+// NAN - Not a number
+var f = 100/"text";
+
+// Number objects
+var g = new Number(1000);
+
+	document.getElementById("content1").
+		innerHTML=a;
+	document.getElementById("content1a").
+		innerHTML=largeNumber;
+	document.getElementById("content2").
+		innerHTML=b;
+	document.getElementById("content2a").
+		innerHTML= "c = " + c;
+	document.getElementById("content3").
+		innerHTML="d = " + d;
+	document.getElementById("content4").
+		innerHTML="e = " + e;
+	document.getElementById("content5").
+		innerHTML= "30 = " + "Decimal: " + myNum + "<br>" +
+		"Hexadecimal: " + myNum.toString(16) + "<br>" +
+		"Octal: " + myNum.toString(8) + "<br>" + 
+		"Binary: " + myNum.toString(2);
+	document.getElementById("content6").
+		innerHTML=typeof Infinity;
+	document.getElementById("content7").
+		innerHTML=myInfinity + Infinity;
+	document.getElementById("content8").
+		innerHTML=f + " typeof " + typeof NaN;
+	document.getElementById("content9").
+		innerHTML=g;
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1>
+	<span class="animate">Bubbling and Capturing</span>
+</h1>
+<p id="p1">
+    <span id="s1">Bubbling Example !!!</span>
+</p>
+<p id="p2">
+    <span id="s2">Capturing Example !!!</span>
+</p>
+
+<script>
+// Bubbling - this is the default, value is false
+// Inner most and then outer most
+
+// Capturing - value is true
+// Outer most and then inner most
+
+    document.getElementById("s1").addEventListener("click", bubble1, false);
+    document.getElementById("p1").addEventListener("click", bubble2, false);
+    document.getElementById("s2").addEventListener("click", capture1, true);
+    document.getElementById("p2").addEventListener("click", capture2, true);
+
+    function bubble1() {
+        alert("Clicked Span");
+    }
+
+    function bubble2() {
+        alert("Clicked Paragraph");
+    }
+
+    function capture1() {
+        alert("Clicked Span");
+    }
+
+    function capture2() {
+        alert("Clicked Paragraph");
+    }
+</script>
+</body>
+</html>

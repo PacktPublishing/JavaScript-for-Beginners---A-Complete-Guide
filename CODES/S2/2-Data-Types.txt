@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Data Types</span>
+</h1>
+
+<p>
+	<span id="content1"></span>
+	<span id="content2"></span>
+	<span id="content3"></span>
+	<span id="content4"></span>
+	<span id="content5"></span>
+	<span id="content6"></span>
+</p>
+
+<script>
+	var num=10;
+	var name="Mike";
+	var carArray=["BMW", "Audi"];
+	var carObject={make:"BMW", model:"335i"};
+	var x=true;
+	var y=false;
+
+	document.getElementById("content1").innerHTML=num;
+	document.getElementById("content2").innerHTML=name;
+	document.getElementById("content3").innerHTML=carArray[0];
+	document.getElementById("content4").innerHTML=
+	carObject.model;
+	document.getElementById("content5").innerHTML=x;
+	document.getElementById("content6").innerHTML=
+	typeof carObject;
+
+</script>
+</body>
+</html>

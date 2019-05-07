@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Fun with JavaScript</h1>
+
+<p id="content">This is the paragraph that we would like to change and why wait, LET'S DO THIS</p>
+
+<button type="button" onclick="jsFunction()">JavaScript in Action</button>
+<script src="myScript.js">
+</script>
+</body>
+</html>

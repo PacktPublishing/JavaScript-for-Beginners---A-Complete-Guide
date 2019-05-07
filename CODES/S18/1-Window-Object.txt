@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1>
+	<span class="animate">Window Object</span>
+</h1>
+
+<p><button id="btn1" onclick="openWindow()">Open Window</button>
+<button id="btn2" onclick="winFocus()">Focus Window</button>
+<button id="btn3" onclick="closeWindow()">Close Window</button>
+</p>
+<p><span id="content1"></span></p>
+<p><span id="content2"></span></p>
+
+<script>
+document.getElementById("content1").innerHTML = 
+"Inner Height: " + window.innerHeight + " px";
+
+document.getElementById("content2").innerHTML = 
+"Inner Width: " + window.innerWidth + " px";
+
+// For IE < 9
+// document.body.clientHeight
+// document.body.clientWidth
+
+var myWin;
+
+function openWindow() {
+	// url, name, specifications
+	// name -> _blank (new window)
+	// name -> _self (Replace the current window)
+	// Specification - height, width, top, left
+	myWin = window.open("http://www.letskodeit.com", "myWin", "width=600, height=600, top=300, left=600");
+}
+
+function winFocus() {
+	myWin.focus();
+}
+
+function closeWindow() {
+	myWin.close();
+}
+
+</script>
+
+
+</body>
+</html>

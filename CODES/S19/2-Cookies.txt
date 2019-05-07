@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body onload="checkCookie()">
+<h1>
+	<span class="animate">Managing Cookies</span>
+</h1>
+<p><img src="cookies.jpg" id="img1" alt="Image Place"
+		style="width:128px;height:128px;"></p>
+<p><span id="content"></span></p>
+<p><button id="btn1" 
+	onclick="changeCookie()">Change Cookie</button>
+	<button id="btn2" 
+	onclick="deleteCookie()">Delete Cookie</button>
+</p>
+
+<script>
+// Store the username
+function setCookie(cookieName, cookieValue, days) {
+    var d = new Date();
+    d.setDate(d.getDate() + days);
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cookieName+"="+cookieValue+"; "+expires;
+    alert("Cookie valid till: " + d.toGMTString());
+}
+
+// Get the value of cookie
+// c1=v1; c2=v2
+// a = [c1=v1, c2=v2]
+function getCookie(cookieName) {
+    var name = cookieName + "=";
+    var cookieArray = document.cookie.split('; | ; ');
+    var len = cookieArray.length;
+    for(var i=0; i<len; i++) {
+        var c = cookieArray[i];
+        if (c.indexOf(name) == 0) {
+        	// substring starting after "cookieName="
+        	// substring gets string from starting index
+        	// to ending index -1
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+// Check if cookie is set
+function checkCookie() {
+    var userName=getCookie("username");
+    if (userName != "") {
+        document.getElementById("content").innerHTML=
+        "Welcome again " + userName + " !!!";
+    } else {
+       userName = prompt("Please enter your name:","");
+       if (userName != "" && userName != null) {
+           setCookie("username", userName, 31);
+           document.getElementById("content").innerHTML=
+        	"Welcome " + userName + " !!!";
+       }
+    }
+}
+
+// Change Cookie
+function changeCookie() {
+	var userName=getCookie("username");
+	userName = prompt("Please enter your name:","");
+	if (userName != "" && userName != null) {
+		setCookie("username", userName, 31);
+		document.getElementById("content").innerHTML=
+        "Welcome " + userName + " !!!";
+	}
+}
+
+// Delete Cookie
+function deleteCookie() {
+	var d = new Date();
+    d.setDate(d.getDate() - 1);
+	var userName=getCookie("username");
+	document.cookie = "username="+userName+
+		"; expires=" + d.toGMTString();
+	var parent = document.getElementsByTagName("p")[0];
+	var child = document.getElementById("img1");
+	parent.removeChild(child);
+	document.getElementById("content").innerHTML="";
+}
+</script>
+
+
+</body>
+</html>

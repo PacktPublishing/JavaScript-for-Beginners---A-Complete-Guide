@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1>
+	<span class="animate">JavaScript History</span>
+</h1>
+<p>
+<button id="btn1" onclick="openFunction()">
+    Let's go to Hello Page</button>
+</p>
+<p>
+<button id="btn2" onclick="forwardFunction()">Forward</button>
+</p>
+
+<script>
+
+function forwardFunction() {
+    window.history.forward();
+}
+
+function openFunction() {
+    window.open("hello.htm", "_self");
+}
+
+</script>
+
+
+</body>
+</html>

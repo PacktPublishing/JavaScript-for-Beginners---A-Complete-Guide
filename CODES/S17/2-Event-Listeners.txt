@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1>
+	<span class="animate">Event Listeners</span>
+</h1>
+<p>
+	<button id="btn1">Submit</button>
+</p>
+<p>
+	<span id="content1">Watch This Element</span>
+	<span id="content1a">One More Click</span>
+</p>
+<p>
+	<button id="btn2">Parameters</button>
+</p>
+<p>
+	<span id="content2"></span>
+</p>
+
+<script>
+var x = document.getElementById("btn1");
+x.addEventListener("mouseover", mouseOver);
+x.addEventListener("click", click1);
+x.addEventListener("mouseout", mouseOut);
+x.addEventListener("click", click2);
+
+function click1() {
+    var x = document.getElementById("content1");
+    x.innerHTML = "Clicked !!!";
+    x.style.fontSize = "18px";
+}
+
+function click2() {
+    var x = document.getElementById("content1a");
+    x.innerHTML = "This also works !!!";
+    x.style.fontSize = "18px";
+}
+
+function mouseOver() {
+    var x = document.getElementById("content1");
+    x.innerHTML = "Mouse Over !!!";
+    x.style.fontSize = "18px";
+}
+
+function mouseOut() {
+    var x = document.getElementById("content1");
+    x.innerHTML = "Mouse Out !!!";
+    x.style.fontSize = "18px";
+}
+
+var a = 10;
+var b = 10;
+
+document.getElementById("btn2").addEventListener("click", 
+	function() { calculate(a, b);});
+function calculate(x, y) {
+    var z = x + y;
+    document.getElementById("content2").innerHTML = z;
+}
+
+</script>
+
+
+</body>
+</html>

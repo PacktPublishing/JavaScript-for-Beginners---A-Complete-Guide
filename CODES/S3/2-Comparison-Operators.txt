@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body>
+<h1 >
+	<span class="animate">Comparison and Logical Operators</span>
+</h1>
+<p><span id="content1"></span></p>
+<p><span id="content2"></span></p>
+<p><span id="content3"></span></p>
+<p><span id="content4"></span></p>
+<p><span id="content5"></span></p>
+<p><span id="content6"></span></p>
+<p><span id="content7"></span></p>
+<p><span id="content8"></span></p>
+<p><span id="content9"></span></p>
+<p><span id="content10"></span></p>
+<p><span id="content11"></span></p>
+<p><span id="content12"></span></p>
+
+<script>
+var x = 10;
+var z = 10;
+// Comparison Operators
+// "==" Equal to value
+document.getElementById("content1").innerHTML=
+    "Equality: " + (x==20);
+
+// "===" Equal to value and type
+document.getElementById("content2").innerHTML=
+    "Equality with type: " + (x==="10");
+
+// "!=" Not equal to value
+document.getElementById("content3").innerHTML=
+    "Not Equal to: " + (x != 10);
+
+// "!==" Not equal to value and type
+document.getElementById("content4").innerHTML=
+    "Not Equal to with type: " + (x !== "10");
+
+// ">" Greater than
+document.getElementById("content5").innerHTML=
+    "Greater than: " + (x>10);
+
+// "<" Less than
+document.getElementById("content6").innerHTML=
+    "Less than: " + (x<10);
+
+// ">=" Greater than or equal to
+document.getElementById("content7").innerHTML=
+    "Greater than or equal to: " + (x>=10);
+
+// "<=" Less than or equal to
+document.getElementById("content8").innerHTML=
+    "Less than or equal to: " + (x<=10);
+
+// Logical Operators
+// "&&" and
+var y = 6;
+document.getElementById("content9").innerHTML=
+    "Both conditions true: " + (x>10 && y<10);
+
+// "||" or
+document.getElementById("content10").innerHTML=
+    "Any one condition true: " + (x>10 || y<10);
+
+// "!" not
+document.getElementById("content11").innerHTML=
+    "Opposite the condition output: " + !(x==10);
+
+// "?" Conditional Operator
+// Assign the value based on the condition
+var age=18;
+var adult="";
+adult = (age>=18) ? "Yes, you are adult !" : "Yet to be !";
+document.getElementById("content12").innerHTML=adult;
+
+</script>
+</body>
+</html>
